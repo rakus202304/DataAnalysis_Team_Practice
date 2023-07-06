@@ -10,36 +10,8 @@ RUN apt-get update \
     # pipのアップデート
     && pip install --upgrade pip
 
-# 作業するディレクトリを変更
-WORKDIR /home/
+# requirements.txtをコピーする
 COPY requirements.txt ${PWD}
 
 # pythonのパッケージをインストール
 RUN pip install -r ./requirements.txt
-
-# dataディレクトリを作って、そこにdataをコピーする。
-RUN mkdir /home/data
-WORKDIR /home/data
-COPY ./data ${PWD}
-
-# デフォルトの最初の作業ディレクトリを指定
-WORKDIR /home
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
