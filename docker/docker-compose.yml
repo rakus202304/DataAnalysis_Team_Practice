@@ -18,4 +18,4 @@ services:
       - "127.0.0.1:8888:8888"
     volumes:
       - ./py3/root_jupyter:/root/.jupyter
-      - /Users/iseshinji/Desktop/python_study/2307work:/workspace
+      - ..:/workspace
